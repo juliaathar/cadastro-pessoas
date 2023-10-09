@@ -127,17 +127,14 @@ public class Main {
                                 PessoaJuridica novapj = new PessoaJuridica();
                                 Endereco novoEndPj = new Endereco();
 
-                                System.out.println("Digite o nome da pessoa jurídica: ");
-                                novapj.nome = scanner.next();
+                                System.out.println("Digite a razão social: ");
+                                novapj.razaoSocial = scanner.next();
 
                                 System.out.println("Digite o CNPJ: ");
                                 novapj.cnpj = scanner.next();
 
                                 System.out.println("Digite o rendimento mensal (Digite somente numero): ");
                                 novapj.rendimento = scanner.nextInt();
-
-                                System.out.println("Digite a razão social: ");
-                                novapj.razaoSocial = scanner.next();
 
                                 System.out.println("Digite o logradouro: ");
                                 novoEndPj.logradouro = scanner.next();
@@ -168,10 +165,9 @@ public class Main {
 
                                     for (PessoaJuridica cadaPj : listaPj){
                                         System.out.println();
-                                        System.out.println("Nome: " + cadaPj.nome);
+                                        System.out.println("Razão Social: " + cadaPj.razaoSocial);
                                         System.out.println("CNPJ: " + cadaPj.cnpj);
                                         System.out.println("Endereço: " + cadaPj.endereco.logradouro + ", " + cadaPj.endereco.numero);
-                                        System.out.println("Razão Social: " + cadaPj.razaoSocial);
                                         System.out.println("Imposto a ser pago: " + metodosPj.CalcularImposto(cadaPj.rendimento));
                                         System.out.println();
                                         System.out.println("Digite 0 para continuar");
